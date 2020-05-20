@@ -1,0 +1,46 @@
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles() %>%
+addMarkers(lat = -6.2268, lng = -35.045, popup = "Praia do Pipa")
+addMarkers
+
+
+
+
+## function (map, lng = NULL, lat = NULL, layerId = NULL, group = NULL, 
+##     icon = NULL, popup = NULL, popupOptions = NULL, label = NULL, 
+##     labelOptions = NULL, options = markerOptions(), clusterOptions = NULL, 
+##     clusterId = NULL, data = getMapData(map)) 
+## {
+##     if (missing(labelOptions)) 
+##         labelOptions <- labelOptions()
+##     if (!is.null(icon)) {
+##         icon <- evalFormula(list(icon), data)[[1]]
+##         if (inherits(icon, "leaflet_icon_set")) {
+##             icon <- iconSetToIcons(icon)
+##         }
+##         icon$iconUrl <- b64EncodePackedIcons(packStrings(icon$iconUrl))
+##         icon$iconRetinaUrl <- b64EncodePackedIcons(packStrings(icon$iconRetinaUrl))
+##         icon$shadowUrl <- b64EncodePackedIcons(packStrings(icon$shadowUrl))
+##         icon$shadowRetinaUrl <- b64EncodePackedIcons(packStrings(icon$shadowRetinaUrl))
+##         if (length(icon$iconSize) == 2) {
+##             if (is.numeric(icon$iconSize[[1]]) && is.numeric(icon$iconSize[[2]])) {
+##                 icon$iconSize <- list(icon$iconSize)
+##             }
+##         }
+##         icon <- filterNULL(icon)
+##     }
+##     if (!is.null(clusterOptions)) 
+##         map$dependencies <- c(map$dependencies, markerClusterDependencies())
+##     pts <- derivePoints(data, lng, lat, missing(lng), missing(lat), 
+##         "addMarkers")
+##     invokeMethod(map, data, "addMarkers", pts$lat, pts$lng, icon, 
+##         layerId, group, options, popup, popupOptions, clusterOptions, 
+##         clusterId, safeLabel(label, data), labelOptions, getCrosstalkOptions(data)) %>% 
+##         expandLimits(pts$lat, pts$lng)
+## }
+## <bytecode: 0x00000000141ec228>
+## <environment: namespace:leaflet>
+
+
+my_map
